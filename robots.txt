@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://zabcd121.github.io/sitemap/sitemap-index.xml
+Host: https://zabcd121.github.io
