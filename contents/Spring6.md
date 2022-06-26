@@ -1,12 +1,12 @@
 ---
-date: '2020-07-29'
-title: 'Test'
+date: '2022-06-01'
+title: '6. Spring Bean 등록'
 categories: ['Spring']
-summary: '홈페이지를 운영하는 많은 사람들 또는 기업들이 검색 페이지 최상단에 보여지게 하기 위해 어떤 최적화 작업을 하는지 알아보자.'
-thumbnail: './test.png'
+summary: '6일차 공부'
+thumbnail: './image/Spring.png'
 ---
 
-## 7일차 공부(2022.06.03)
+## 6일차 공부(2022.06.03)
 
 # Spring Bean을 등록하는 법
 
@@ -23,9 +23,9 @@ MemberController가 MemberService를 통해서 회원가입하고 데이터 조�
 
 #### MemberController가 MemberService 객체를 가지고 있는데 이거를 new로 내부에서 생성하기 보다는 주입 받아서 사용하는게 좋음
 
-> 여기서 MemberService를 자동으로 연결하려면 MemberSerivce도 Bean으로 등록해야 하므로 **@Service** 어노테이션을 붙여줘야 함.
+> 여기서 MemberService를 자동으로 연결하려면 MemberSerivce도 Bean으로 등록해야 하므로 _@Service_ 어노테이션을 붙여줘야 함.
 > AND
-> MemberRepository interface의 구현체인 MemoryMemberRepository클래스에는 **@Repository** 어노테이션을 붙여줘야 함.
+> MemberRepository interface의 구현체인 MemoryMemberRepository클래스에는 _@Repository_ 어노테이션을 붙여줘야 함.
 
 이런식으로 Spring은 정형화된 패턴으로 구성되어 있다!
 
@@ -59,22 +59,20 @@ MemberController가 MemberService를 통해서 회원가입하고 데이터 조�
 
 ### 컴포넌트 방식이고 @Component라는 키워드로 Component로 등록도 가능하다.
 
-#### @Controller, @Service, @Repository는 @Compoent가 붙어있는 interface이다.
-
+@Controller, @Service, @Repository는 @Compoent가 붙어있는 interface이다.
 ![](https://velog.velcdn.com/images/zabcd121/post/7fc4b093-8ff6-4ff3-a444-2be1596cf340/image.png)
 
 #### Spring은 Spring Container에 Bean을 등록할 때 기본적으로 싱글톤 패턴으로 등록하여 유일하게 하나만 등록해서 공유하도록 한다.
 
 #### 따라서 같은 Bean이면 모두 같은 Instance이다.
 
-#### 추가 설정으로 싱글톤을 사용하지 않도록 할 수 있지만, 특수한 경우를 제외하고는 **_싱글톤_**으로 사용함
+#### 추가 설정으로 싱글톤을 사용하지 않도록 할 수 있지만, 특수한 경우를 제외하고는 **싱글톤**으로 사용함
 
-![](https://velog.velcdn.com/images/zabcd121/post/69173bd8-53e8-4362-aa66-dfb0f65afb53/image.png)
+<img src="https://velog.velcdn.com/images/zabcd121/post/69173bd8-53e8-4362-aa66-dfb0f65afb53/image.png" width=700px>
 위의 예제에서는 HelloSpringApplication클래스에서 main을 통해 Spring이 실행되는데 package는 hello.hellospring이다.
 기본 설정으로는 이 패키지와 동일하거나 하위 패키지의 클래스들은 Spring이 자동으로 뒤져서 @을 확인하고 Bean으로 등록하는 컴포넌트 스캔 과정을 거치지만
 그 외부의 패키지라면 컴포넌트 스캔 과정을 거치지 않는다.
-
-![](https://velog.velcdn.com/images/zabcd121/post/95037679-6b78-4541-8f41-9c1312a668d7/image.png)
+<img src="https://velog.velcdn.com/images/zabcd121/post/95037679-6b78-4541-8f41-9c1312a668d7/image.png" width=700px>
 @SpringBootApplication 내부를 확인해보면 @ComponentScan이 존재
 
 ## 2. 자바 코드로 직접 스프링 빈 등록

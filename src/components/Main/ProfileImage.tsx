@@ -11,7 +11,11 @@ const ProfileImageWrapper = styled(GatsbyImage)`
   height: 120px;
   margin-bottom: 30px;
   border-radius: 50%;
-  border: 2px solid #4682b4;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #4b0082 0%, #00ffff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 
   @media (max-width: 768px) {
     width: 80px;
