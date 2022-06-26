@@ -54,6 +54,12 @@ const Title = styled.div`
 
   @media (max-width: 768px) {
     font-size: 25px;
+    margin-bottom: 7px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin-bottom: 7px;
   }
 `
 const LinkflexWrapper = styled.div`
@@ -72,6 +78,12 @@ const BlogLink = styled(Link)`
   border-box: border-box;
   padding: 1px;
   color: #1363df;
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+    margin-top: 3px;
+    margin-bottom: 1px;
+  }
 `
 
 const Introduction: FunctionComponent<IntroductionProps> = function ({
