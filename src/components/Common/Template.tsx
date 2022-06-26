@@ -53,6 +53,11 @@ const Template: FunctionComponent<TemplateProps> = function ({
           content="U7-cwSF7YAB1pkWft89sKGlJ3onQrmqa-4dx2twP-5Q"
         />
 
+        <meta
+          name="naver-site-verification"
+          content="2b551cbc08c42f016fa611dea80e58372ae27c02"
+        />
+
         <html lang="ko" />
       </Helmet>
 
