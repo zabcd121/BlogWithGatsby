@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.naver.com/sitemap/sitemap-index.xml
-Host: https://www.naver.com
+Sitemap: https://zabcd121.github.io/sitemap/sitemap-index.xml
+Host: https://zabcd121.github.io
