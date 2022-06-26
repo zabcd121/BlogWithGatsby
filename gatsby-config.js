@@ -3,7 +3,7 @@ module.exports = {
     title: `백엔드 개발자의 개발 블로그`,
     description: `백엔드 개발자를 목표로 저를 기록하는 블로그입니다.`,
     author: `Hyeon Seok`,
-    siteUrl: 'https://www.naver.com/',
+    siteUrl: 'https://zabcd121.github.io/',
   },
   plugins: [
     {
@@ -83,7 +83,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://www.naver.com/',
+        siteUrl: 'https://zabcd121.github.io/',
         stripQueryString: true,
       },
     },
