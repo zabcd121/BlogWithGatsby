@@ -6,7 +6,7 @@ summary: '6일차 공부'
 thumbnail: './image/Spring.png'
 ---
 
-## 6일차 공부(2022.06.03)
+## 6일차 공부(2022.06.01)
 
 # Spring Bean을 등록하는 법
 

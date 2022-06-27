@@ -238,6 +238,9 @@ memberRepository.findByName(member.getName())
 ```
 
 이런식으로 메서드를 검증 로직을 분리하는게 깔끔함
+<br/>
+<br/>
+<br/>
 
 ## 회원 서비스 테스트
 
@@ -296,14 +299,14 @@ IllegalStateException e = assertThrows(IllegalStateException.class, () -> member
 assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 ```
 
-assertThrows의 첫번째 파라미터로 발생할 예외 클래스 타입을 넣고, 두번째 파라미터로 예외가 발생해야 할 작업을 람다식으로 작성.
+#### assertThrows의 첫번째 파라미터로 발생할 예외 클래스 타입을 넣고, 두번째 파라미터로 예외가 발생해야 할 작업을 람다식으로 작성.
 
 > import static org.assertj.core.api.Assertions._;
 > import static org.junit.jupiter.api.Assertions._;
 
-static으로 import하면 메서드를 사용할 때 앞에 Assertions를 붙이지 않아도 됨
+#### static으로 import하면 메서드를 사용할 때 앞에 Assertions를 붙이지 않아도 됨
 
-MemberRepository가 여러개 생성되는 것을 방지하기 위해서 MemberService클래스에서 MemberRepository를 주입받는 방식으로 변경
+#### MemberRepository가 여러개 생성되는 것을 방지하기 위해서 MemberService클래스에서 MemberRepository를 주입받는 방식으로 변경
 
 ```java
 public class MemberService {
@@ -315,7 +318,7 @@ public class MemberService {
     }
 ```
 
-MemberServiceTest클래스에서도 MemberService와 똑같은 db를 가진 MemoryMemberRepository를 사용하기 위해 @BeforeEach 어노테이션을 이용하여 각 메서드의 실행 전에 MemberSerivce에 memberRepository의 구현체인 MemoryMemberRepository를 주입시켜준다. => **DI(Dependency Injection)**
+#### MemberServiceTest클래스에서도 MemberService와 똑같은 db를 가진 MemoryMemberRepository를 사용하기 위해 @BeforeEach 어노테이션을 이용하여 각 메서드의 실행 전에 MemberSerivce에 memberRepository의 구현체인 MemoryMemberRepository를 주입시켜준다. => **DI(Dependency Injection)**
 
 ```java
 class MemberServiceTest {
@@ -336,6 +339,108 @@ class MemberServiceTest {
   .....
 }
 ```
+<br/>
 
-<br>
-<br>
+```java
+public class MemberForm {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+```java
+@Controller
+public class MemberController {
+
+    private final MemberService memberService;
+
+
+    @Autowired
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
+    @GetMapping("/members/new")
+    public String createForm(){
+        return "members/createMemberForm";
+    }
+
+    @PostMapping("/members/new")
+    public String create(MemberForm form){
+        Member member = new Member();
+        member.setName(form.getName());
+
+        memberService.join(member);
+
+        return "redirect:/"; //회원가입이 끝나니까 redirect로 홈화면으로 보냄
+    }
+    
+    @GetMapping("/members")
+    public String list(Model model){
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+        return "members/memberList";
+    }
+}
+
+```
+
+### 1. 회원 등록
+```html
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+  <div class="container">
+      <form action="/members/new" method="post">
+          <div class="form-group">
+              <label for="name">이름</label>
+              <input type="text" id="name" name="name" placeholder="이름을
+  입력하세요">
+          </div>
+          <button type="submit">등록</button>
+      </form>
+  </div> <!-- /container -->
+</body>
+</html>
+```
+
+#### 이렇게 input의 name값을 MemberForm 클래스의 set 뒤에붙는 이름과 동일하게 하면 MemberController의 post method create의 파라미터인 MemberForm의 속성 name에 Spring이 자동으로 public인 set메서드를 호출하여 input값이 들어가게 됨. 
+ex) input 의 속성 name="ace"이면 MemberForm의 setter의 name은 setAce여야 동작함
+
+
+### 2. 회원 조회
+
+```html
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="container">
+        <div>
+            <table>
+                <thead> <tr>
+                    <th>#</th>
+                    <th>이름</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="member : ${members}">
+                    <td th:text="${member.id}"></td>
+                    <td th:text="${member.name}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> <!-- /container -->
+</body>
+</html>
+```
+
+#### th:each="member : ${members}" => thymeleaf의 Loop 문법
+#### th:text="${member.id}" 여기서는 Member클래스의 프로퍼티 id에 접근할 수 있는 get메서드를 이용하여 값을 가져옴

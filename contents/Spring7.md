@@ -1,10 +1,12 @@
 ---
-date: '2022-06-03'
-title: '7. Spring DB 접근 기술'
+date: '2022-06-02'
+title: '7. Spring DB 접근 기술 - H2'
 categories: ['Spring']
 summary: '7일차 공부'
 thumbnail: './image/Spring.png'
 ---
+
+## 7일차 공부(2022.06.02)
 
 ## Spring DB 접근 방법
 

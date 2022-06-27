@@ -166,7 +166,7 @@ public class HelloController {
 
 ### 동작 원리
 
-![](https://velog.velcdn.com/images/zabcd121/post/a57de011-a9ba-438f-b306-39f62ce2b840/image.png)
+<img src="https://velog.velcdn.com/images/zabcd121/post/a57de011-a9ba-438f-b306-39f62ce2b840/image.png" width=50%>
 출처: 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술(김영한)
 
 #### 내가 controller에서 get메서드에서 반환했던 hello라는 String 값을 viewResolver가 기본적으로 resources:templates/ + {ViewName} + .html로 매핑해서 이 html을 렌더링하도록 함.
@@ -185,17 +185,16 @@ public class HelloController {
 
 # 3. 빌드하고 실행하기
 
-#### 1. ./gradlew.bat build(MAC: ./gralew build)
+### 1. ./gradlew.bat build(MAC: ./gralew build)
 
 현재 프로젝트 디렉터리에서 진행해야 함
 그러면 build폴더가 생기게 되고 아래와 같은 폴더 및 파일들이 생김
 <img src="https://velog.velcdn.com/images/zabcd121/post/7ef4ad96-9402-422f-aad7-75ef8a471a6e/image.png" width=60%>
 
-#### 2. cd libs
+### 2. cd libs
 
-<p align="center"> 
 <img src="https://velog.velcdn.com/images/zabcd121/post/3e3957ba-47be-42b8-84da-3994bfa39de1/image.png" width="60%">
-</p>
+
 libs 폴더 내에 hello-spring-0.0.1-SNAPSHOT.jar, hello-spring-0.0.1-SNAPSHOT-plain.jar가 존재
 
 #### 3. java -jar {project name}-0.0.1-SNAPSHOT.jar
@@ -226,7 +225,7 @@ libs 폴더 내에 hello-spring-0.0.1-SNAPSHOT.jar, hello-spring-0.0.1-SNAPSHOT-
 #### - gradlew.bat는 window batch script
 
 <p align="center">
-<img src="https://velog.velcdn.com/images/zabcd121/post/e2b4ae6e-fc68-486b-b5ff-18d4e7ace3d4/image.png"  width=60%>
+<img src="https://velog.velcdn.com/images/zabcd121/post/e2b4ae6e-fc68-486b-b5ff-18d4e7ace3d4/image.png"  width=40%>
   </p>
 
 참고: https://docs.gradle.org/current/userguide/gradle_wrapper.html
