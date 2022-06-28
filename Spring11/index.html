@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="naver-site-verification" content="2b551cbc08c42f016fa611dea80e58372ae27c02"/><meta data-react-helmet="true" name="google-site-verification" content="U7-cwSF7YAB1pkWft89sKGlJ3onQrmqa-4dx2twP-5Q"/><meta data-react-helmet="true" name="twitter:creator" content="@username"/><meta data-react-helmet="true" name="twitter:site" content="@username"/><meta data-react-helmet="true" name="twitter:image" content="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/Spring.png"/><meta data-react-helmet="true" name="twitter:description" content="11일차 공부"/><meta data-react-helmet="true" name="twitter:title" content="8. AOP"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:site_name" content="8. AOP"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:image" content="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/Spring.png"/><meta data-react-helmet="true" property="og:description" content="11일차 공부"/><meta data-react-helmet="true" property="og:title" content="8. AOP"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" name="description" content="11일차 공부"/><meta name="generator" content="Gatsby 4.17.0"/><style data-href="/styles.811b76fa2f764e4356d7.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><title data-react-helmet="true">8. AOP</title><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://zabcd121.github.io/Spring11/" data-baseprotocol="https:" data-basehost="zabcd121.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1strnqo0"><style data-emotion="css-global 1fxcxu9">@import url(‘https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap&subset=korean’);*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1200px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;675&#x27; width=&#x27;1200&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABB0lEQVQoz61T22rCQBDdD+3f+NgPEOyDpVTBJ6GClIgUCyK0YNEqQZNWvBXBS7ReEhNnj2RsJIatIDgw7Oywc+ZyZgWuLCIwpJSsKvtiwFMAAskdn4H/nEbjRRj90mpUcccKSRI7OrMmYi83KJhpvm89G7a3hkcuFs4Uc3vMHWzcJfuioxHRDOnaLTTjEYO5gaVj4bn9gOJXBvlWEjn9Dk96gu3XThbmpHYckxLQz/w+KOBzVIY5rWPjrqAZKWSbcVR6eTRGFXz8lPDW13BfjaFr6X9xpGL54Px1LK4gyO6L33JYfIDh4hs78tSknFuRMPvhWf9HpFDtHXEwKdfj9I1Us3zNn7IHJa9YN0fygIsAAAAASUVORK5CYII=" alt=""/><picture><source type="image/webp" data-srcset="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/b3177/Spring.webp 300w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/ea367/Spring.webp 600w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/8ab23/Spring.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" data-src="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/2ae51/Spring.png" data-srcset="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/4b853/Spring.png 300w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/1886e/Spring.png 600w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/2ae51/Spring.png 1200w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/b3177/Spring.webp 300w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/ea367/Spring.webp 600w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/8ab23/Spring.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" src="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/2ae51/Spring.png" srcSet="/static/ecbfb406b152e2d40fa0e7f87d5b8b97/4b853/Spring.png 300w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/1886e/Spring.png 600w,/static/ecbfb406b152e2d40fa0e7f87d5b8b97/2ae51/Spring.png 1200w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">8. AOP</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>Spring</div><div>2022.06.28.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><h2>11일차 공부(2022.06.28)</h2>
+<h1>AOP(Aspect Oriented Programming)</h1>
+<h2>1. AOP가 필요한 Example</h2>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Long</span> <span class="token function">join</span><span class="token punctuation">(</span><span class="token class-name">Member</span> member<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">long</span> start <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">try</span><span class="token punctuation">{</span>
+        <span class="token comment">//같은 이름이 있는 중복 회원X 라고 가정</span>
+        <span class="token function">validateDuplicateMember</span><span class="token punctuation">(</span>member<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//중복 회원 검증</span>
+
+        memberRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span>member<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> member<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> finish <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> timeMs <span class="token operator">=</span> finish <span class="token operator">-</span> start<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"join = "</span> <span class="token operator">+</span> timeMs <span class="token operator">+</span> <span class="token string">"ms"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div>
+<blockquote>
+<h4>만약 위와 같이 회원가입, 회원조회 등등 여러 메서드에서 시간 측정을 해야한다고 가정하고 시간 측정 코드를 추가하였다.</h4>
+</blockquote>
+<br/>
+<h3>문제점</h3>
+<blockquote>
+<h4>1. 회원가입, 조회 등의 기능에서 시간 측정은 핵심 관심사항 X</h4>
+<h4>2. 시간 측정 로직은 공통 관심 사항O</h4>
+<h4>3. 비지니스 로직에 시간 측정 로직이 섞여서 유지보수가 어려움.</h4>
+<h4>4. 시간을 측정하는 로직을 따로 빼서 공통 로직으로 만들기는 어려움.</h4>
+<h4>5. 만약 시간측정 로직을 변경해야 하면 하나씩 다 찾아가면서 변경해야 하는 끔찍한 상황이 벌어짐.</h4>
+</blockquote>
+<h2>2. 공통 관심 사항 vs 핵심 관심 사항의 분리</h2>
+<ul>
+<li>
+<h4>공통 관심 사항(cross-cutting concern)</h4>
+</li>
+<li>
+<h4>핵심 관심 사항(core concern)</h4>
+</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 509px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1a08a907be97b98588a15d33fad53196/98235/AOP.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 72.91666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAChUlEQVQ4y61STU8TURQdDPhBITFKLK2irnRVBENFElIXrJRfwD9Ad34gqIC6cGHAhGBZ6MY1auIvABJKWJDGGoa2GNuZfsxMC+1IYTot05k3x7wnLSZ1Q8KdnLnv3XPvnTPvPo47osludxWN/6wPE2zbbjgKADQQTaOeo2u7UmGxKs8dEMcG+jp7nODS6bSgKIogyVINsiwLmUxGoFx0MypEohGB3+AZRFGsy2c1iixIkiRwhUIBdWYDxCbYL+8jEU9AjIuI/YxhM7yJra0tEELwPzMrJriiViR5PUdEVSSpnRRJqCJRdZVWkKJRJKlCisi7MpF2JZLVsixuEYukd9Ik+TtZA92XjTLhSsUS7n28i5anLbj8qgOnn5zC8Odh9sW5wByaHjWi4+UlnH9+DtffXEO5UoZSUOCadME5foH59ol2tL1oQzAZZApxx++DY6QZ7eNOnHzchKFPQ4ABjH0ZxYmHDbj6+gprSPmEnMBadA2to61wTbjgnnTh4qQbzSNnsPxrGUzhg6/30fOuBwNzA+ia6sKzb2NM4fz3edx424m+6T7cmvZi8MMgTNtEtpBF39Rt+N774Jv1Md8/24+wEganaVrd4RplA3t7e7U9MQ+HUDEqjLNNu66OWARctZBOjk6Wgg3atiHLMvgNHqEfIayvryMSiYAKoLk2bFiWxXz1MU3zsKFFrL9NCYFhGCzm9/vhdDrh9Xrh6fSg+2Y3AoEAQqEQ4vE4gsEg9JLO8mlz1lDX9XrpB/dsZmYGDocDvb298Hg8DCsrK0wtz/OIxWIIh8Nsn8lkWA1HfyufzyOXy9Wwvb0NVVVZweLiIpaWlrCwsIDV1VV2sSlPfTW3Chr7A8Oujx4U1j+vAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/1a08a907be97b98588a15d33fad53196/a59e9/AOP.webp 192w,
+/static/1a08a907be97b98588a15d33fad53196/0ca9f/AOP.webp 384w,
+/static/1a08a907be97b98588a15d33fad53196/6c5b4/AOP.webp 509w"
+              sizes="(max-width: 509px) 100vw, 509px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/1a08a907be97b98588a15d33fad53196/3b721/AOP.png 192w,
+/static/1a08a907be97b98588a15d33fad53196/66595/AOP.png 384w,
+/static/1a08a907be97b98588a15d33fad53196/98235/AOP.png 509w"
+            sizes="(max-width: 509px) 100vw, 509px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/1a08a907be97b98588a15d33fad53196/98235/AOP.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<blockquote>
+<h4>스프링에서는 위와 같이 공통 관심 사항을 적용가능하도록 기술을 지원한다.</h4>
+</blockquote>
+<h2>3. AOP 사용하여 분리 해보자!</h2>
+<h3>1. aop/TimeTraceAop.class</h3>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@Aspect</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TimeTraceAop</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Around</span><span class="token punctuation">(</span><span class="token string">"execution(* hello.hellospring..*(..))"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">execute</span><span class="token punctuation">(</span><span class="token class-name">ProceedingJoinPoint</span> joinPoint<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Throwable</span><span class="token punctuation">{</span>
+        <span class="token keyword">long</span> start <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"START: "</span> <span class="token operator">+</span> joinPoint<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> joinPoint<span class="token punctuation">.</span><span class="token function">proceed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//메서드를 실행</span>
+        <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
+            <span class="token keyword">long</span> finish <span class="token operator">=</span> <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">long</span> timeMs <span class="token operator">=</span> finish <span class="token operator">-</span> start<span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"END: "</span> <span class="token operator">+</span> joinPoint<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> timeMs <span class="token operator">+</span> <span class="token string">"ms"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<blockquote>
+<h4><strong>@Aspect</strong>를 붙여줘야 AOP로 사용할 수 있음.</h4>
+<h4><strong>@Around</strong>를 사용하여 이 메서드를 적용할 클래스를 지정할 수 있다.</h4>
+</blockquote>
+<h3>2. SpringCOnfig.class</h3>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">MemberRepository</span> memberRepository<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">public</span> <span class="token class-name">SpringConfig</span><span class="token punctuation">(</span><span class="token class-name">MemberRepository</span> memberRepository<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>memberRepository <span class="token operator">=</span> memberRepository<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">MemberService</span> <span class="token function">memberService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MemberService</span><span class="token punctuation">(</span>memberRepository<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">TimeTraceAop</span> <span class="token function">timeTraceAop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">TimeTraceAop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<blockquote>
+<h4>AOP클래스를 Bean으로 등록해줘야 함.</h4>
+<h4>Component Scan방식을 써도 되지만 특별한 클래스 이므로 직접 Bean으로 등록해주는게 좋다.</h4>
+</blockquote>
+<br/>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 748px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b890a0f72ce6e84a4857cbaf8ddb243c/be2a9/AOPEx.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 21.354166666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAlklEQVQY01VPSQ7EIAzre+ilFXvZwv8f5cqhjDQHy3FiEnM8zwOi1orWGrYupUBkaK9+8zGW1tmc2osx4r5vnOcJYwwO7z1CCCBzuGsipfhxwvZt0Es455BzhrN2LSxfstY6eu8raW9aTxFNw2R9DIiIeuecWtNL5o945LouHPsiU+Sc8K/zLwk1H5KJGImgHmutLmPCF9g4hKaSBodKAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/b890a0f72ce6e84a4857cbaf8ddb243c/a59e9/AOPEx.webp 192w,
+/static/b890a0f72ce6e84a4857cbaf8ddb243c/0ca9f/AOPEx.webp 384w,
+/static/b890a0f72ce6e84a4857cbaf8ddb243c/27bf3/AOPEx.webp 748w"
+              sizes="(max-width: 748px) 100vw, 748px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/b890a0f72ce6e84a4857cbaf8ddb243c/3b721/AOPEx.png 192w,
+/static/b890a0f72ce6e84a4857cbaf8ddb243c/66595/AOPEx.png 384w,
+/static/b890a0f72ce6e84a4857cbaf8ddb243c/be2a9/AOPEx.png 748w"
+            sizes="(max-width: 748px) 100vw, 748px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/b890a0f72ce6e84a4857cbaf8ddb243c/be2a9/AOPEx.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<blockquote>
+<h4>회원목록을 클릭하여 요청을 보내보면 위와 같이</h4>
+<h4>Controller, Service, Repository 순으로 시작되고 역으로 종료되고 시간 측정이 된걸 볼 수 있다.</h4>
+</blockquote>
+</br>
+<h3>결과</h3>
+<ul>
+<li>
+<h4>시간을 측정하는 로직을 별도의 공통 로직으로 만들어 핵심 관심사항과 공통 관심사항을 분리하였다.</h4>
+</li>
+<li>
+<h4>변경하기 편하여 유지보수에 용이하다.</h4>
+</li>
+<li>
+<h4>AOP를 적용하기를 원하는 대상을 선택할 수 있다.</h4>
+</li>
+</ul>
+<h2>4. AOP 내부 동작 원리</h2>
+<h3>(1) AOP 적용 전 의존관계</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 463px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4c5fab92195a46e0b180374590f4b9c2/11b02/AOP1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 29.166666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABJUlEQVQY062QS0sCYRiFB7qsMlLpJ/i7ShTEUYNxytB15c5/0QU1HIIi2rS0jSSzEVFJZhxwoRG60GH85on5oiBp2YGze855L4rv+6w70Gw2Yzgc0uv1sG0b0zQZDAZYloXneZL5K6cIIViJ1S8LXzCdTul0OrTbbVkSFHa7Xfr9Pgt3IZn1XFCq8M9Sqq9VDi8PyNRV0rU0ak0leZOg+daUwNJdyhNd18UXMP4Yk6lnSFVTP3z8Ks7F0/lXYfI6gXKkEC7usXsaIlTYYVvfonxfZj6ZY40sHMfBdka8jyc8vjxIPlIMEy1F2C9F2dQ2iJ3F8ISHYpgGai2NbujkG5p07jZHy2rJid+/CX4WaDqfULg7QWto6EaeY0MnW89Sea7IDT8Bx4eVTYmrQUEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/4c5fab92195a46e0b180374590f4b9c2/a59e9/AOP1.webp 192w,
+/static/4c5fab92195a46e0b180374590f4b9c2/0ca9f/AOP1.webp 384w,
+/static/4c5fab92195a46e0b180374590f4b9c2/fb1d9/AOP1.webp 463w"
+              sizes="(max-width: 463px) 100vw, 463px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/4c5fab92195a46e0b180374590f4b9c2/3b721/AOP1.png 192w,
+/static/4c5fab92195a46e0b180374590f4b9c2/66595/AOP1.png 384w,
+/static/4c5fab92195a46e0b180374590f4b9c2/11b02/AOP1.png 463w"
+            sizes="(max-width: 463px) 100vw, 463px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/4c5fab92195a46e0b180374590f4b9c2/11b02/AOP1.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h3>(2) AOP 적용 후 의존관계</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 398px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c21e2cec5d3d379060209d9474370916/2ab25/AOP2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACQUlEQVQ4y42SS2gTURSG71JU0Fp0qQtNoYoK1p1LhS4Fi25rXSmuBR+7uhA0oFCwPqBu7KIIom0jTR9pbdHa0qYJsaFCRZqonWSazNzpJO3Mvff8khuaxkeCB777D3MP/5w55zAiaqqFUqoJQF2UlCUNiHT6mLTtZqZIyX9BpCQAaZqmXFiIyuj8vIzHY3JqalLOzszIZDIphRA6h4gUAYIAyVAjiKh0wnVdGEYW6e8/kcnmsLqawaqRhWmuQSlVyd2CFbwC8Q1OzoZDzqajn4t+sewGkGXliVsmudwknvtBjmWQy9con8uS6xao7Lcd7HSwBSVagqe0nrx/Aq3drchZWTiuxEr8NRA+BAoHQNMXQBNngMEGeHPXYDmb5QqV2q5w142dOHBnPxpvN2r23tyDI52H8S29DMMsIPm+C+jfDRk6CBo5DjUUAL3ZAW/qPPi6V9WesrLwUhgDnwcQWgxp+hNvMbE8Ueklz6XhZ8YgMuMwkq/gGWPwjWGsG3PIW1znSCl1P7VhvaEIIcBtt/Iub/paV75amP2UwOjoCKLRKGKxGCKRCFKpFJhQAkL+gRKV3/iSWsLzj0/w9MNjPBx8gGeT3Xg0HsTw4hC45cD3ff1hz/O0suqRV1MyLUXfdB/YVQZ2neHovWbsu9UAdoXhXNdZ+EX/tx6Woqbh1o5FEhFcenERHb0daH/Zjo7ey2jracPdd50orhd1jqqeci1DbUoKZsaEYzuwLVvDLQ5uc9h5G5zzvxe7nmH1Ovzv3S8e1JpAwsbxNAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/c21e2cec5d3d379060209d9474370916/a59e9/AOP2.webp 192w,
+/static/c21e2cec5d3d379060209d9474370916/0ca9f/AOP2.webp 384w,
+/static/c21e2cec5d3d379060209d9474370916/b8520/AOP2.webp 398w"
+              sizes="(max-width: 398px) 100vw, 398px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/c21e2cec5d3d379060209d9474370916/3b721/AOP2.png 192w,
+/static/c21e2cec5d3d379060209d9474370916/66595/AOP2.png 384w,
+/static/c21e2cec5d3d379060209d9474370916/2ab25/AOP2.png 398w"
+            sizes="(max-width: 398px) 100vw, 398px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/c21e2cec5d3d379060209d9474370916/2ab25/AOP2.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<blockquote>
+<h4>스프링이 컨테이너에 빈을 등록할 때 진짜 Spring Bean말고 Proxy(대리, 가짜) Spring Bean을 진짜 앞에 등록해준다. jointPoint로 어떤 실행이 발생하면 그때 진짜 Bean을 호출 해준다.</h4>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c9eb42dee5d17c10b6f2edd8008422f5/6a350/AOP5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 23.958333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA4klEQVQY0zWQWQ7CMAxEOQyFLrSBNIvtpL3/rR5KCh9PI1mJxzM3EaGRc+64MJN8xruddVsZpwnvPVGEIUUeOfNI6VKRrrNzTONITpFbKYVaK02LFT6yYLESPhH3dkzTTAwRLaV/fqryNGMohfuPZzNyjqKZm6piZhznyVErooqIoqIUM9SM2sxK7cb1OPosi7A5x/J68do25nVlWZZrYUqJGOMVO+3IL/5/rnpVIrWS2nuRXkEnC3uMLP+F7bqG/i7b04QGw78DW+twHAl7IJtxl9xj97i1cj9Phq4Hg/c98hf0saFGYinYUwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/c9eb42dee5d17c10b6f2edd8008422f5/a59e9/AOP5.webp 192w,
+/static/c9eb42dee5d17c10b6f2edd8008422f5/0ca9f/AOP5.webp 384w,
+/static/c9eb42dee5d17c10b6f2edd8008422f5/dc9b9/AOP5.webp 768w,
+/static/c9eb42dee5d17c10b6f2edd8008422f5/24b26/AOP5.webp 832w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/c9eb42dee5d17c10b6f2edd8008422f5/3b721/AOP5.png 192w,
+/static/c9eb42dee5d17c10b6f2edd8008422f5/66595/AOP5.png 384w,
+/static/c9eb42dee5d17c10b6f2edd8008422f5/fe486/AOP5.png 768w,
+/static/c9eb42dee5d17c10b6f2edd8008422f5/6a350/AOP5.png 832w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/c9eb42dee5d17c10b6f2edd8008422f5/fe486/AOP5.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h4>실제 컨트롤러가 @Autowired로 Service를 자동 주입받을 때 service.getClass()를 통해 어떤 클래스가 주입되었는지를 확인해볼 때 그냥 MemberService가 아니라 뒤에 $$Enhance~~~ 가 뒤에 붙은 Proxy Service 객체가 주입된 것을 볼 수 있다.</h4>
+</blockquote>
+<h3>(3) AOP 적용 전 전체 의존관계</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 470px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/25cac51b72ba39bd8b1c679da23235f1/c52b7/AOP3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 33.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABcklEQVQoz32Ou0oDQRSGpzD6BqLgpVHSKVpE0M4oeYMEvLyEqQKikmgRA2LU9dIk6oAgdiJ2looIImijCStLuhSJK5jJrmd3fpkJkQTEAx//nPOdGYZJKVkrvu8zAKxcLrNcLsey2SzLZDIskUgwwzBYpVLRXu3pOwCTrqtnCiV4G9LnALjjONyyLF4oFvjr2yt/fnnmpmly13W193zvd7+ZEjhVr7aXbERd1FGySrDeLU3xrQjTNCGEwH/FqrUqfYgPsoVN6kw+EQCSkFSjGglPNPCFnit86el9u27TZ/1To3ryiFj3cjeCG0EMrw+hd6UHuzc7wBeQvEwiEA9gND2C8c0xdCx1IHWVAgSweZ1GZzyA/tU+TG1PYnBtAF3xLhzdHoKFtkKY3Z/BjBHGxFYI54/n+uv5u5yez5/OacJGGCf3J9qdPZwhvDeNaD6KRb6A2HEMkYMILp4uwMgjfHvfaGZrqd4hR/OXc8nVTmXT/wDW48RPlIPMAwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/25cac51b72ba39bd8b1c679da23235f1/a59e9/AOP3.webp 192w,
+/static/25cac51b72ba39bd8b1c679da23235f1/0ca9f/AOP3.webp 384w,
+/static/25cac51b72ba39bd8b1c679da23235f1/c63eb/AOP3.webp 470w"
+              sizes="(max-width: 470px) 100vw, 470px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/25cac51b72ba39bd8b1c679da23235f1/3b721/AOP3.png 192w,
+/static/25cac51b72ba39bd8b1c679da23235f1/66595/AOP3.png 384w,
+/static/25cac51b72ba39bd8b1c679da23235f1/c52b7/AOP3.png 470w"
+            sizes="(max-width: 470px) 100vw, 470px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/25cac51b72ba39bd8b1c679da23235f1/c52b7/AOP3.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h3>(4) AOP 적용 후 전체 의존관계</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 486px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a6bf810b0aa0f1c123c6360d66eac16b/c42ee/AOP4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.958333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACSElEQVQoz2WS3UsUYRTGB5KiQohAuimwoCKJoKD/wjsLwVIIYfWqICsrvIgILaL+AKMPSrOgyMKi8qYgwbRdTXdTt23X3FrXwd2d2fl6Z3ZmfrGzLhYdODznfZ/nd3WORFDeWvt/KWhakW/RGebmYsSis0xFviDLMv8z65zkOC6GA1YJTBvMNfXcEqpuk80J5LzOqmIjFxw03cR1XQwbLLeStZwKV1apIKcwJs9ihs9hzPRijbdT/D5EXvPRF0dwJkOI2A3E1EVE+AyqHEc3HJTJHsRECOPrNczIJazxUyjRu0hqJoL/egf+SB3++33wYgN2+DQFAdZ0D+4zCX+0Ae/NTryXW9HSHxAOGK/q8YY3448ewHu7G4ZrMMZOIBWVPJg/QV2gmJ4AsYhnrJD+nSU5H8ZXFjCWp/AK8yDSaOoqy9kVUtGPoCXRMxFQEyCWEMoSkqKqKLZFRs0RTSbICZ14KsmPRAJF09A8h1gqQUbJkVULxBMJMpkMclGh6NoBs6zkKTgmea2INLs4w8G+Buqv7GLv1T3UXd5O9/PzwR6vv+tjY1cNR28eoaF3P9su1DK2MBYs9HDfIWq7twRemd/UVUPn4xBS/Fec1kcnabrXRPODZhrvNNL/qR/f9Bn8PMjx+8foeNpB+1A7bQNtTKemcSyHzqFO2gZaA6/jSYiWhy3cHr2FZBomjulQMkuUrFKgwhBYlhWoa7mV/6pnCmzbRugCV7gV1ioFufIsBSfqe+vtefh+5bDL6nruP161qu+qV875vscfbS2yNVMt0EAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/a6bf810b0aa0f1c123c6360d66eac16b/a59e9/AOP4.webp 192w,
+/static/a6bf810b0aa0f1c123c6360d66eac16b/0ca9f/AOP4.webp 384w,
+/static/a6bf810b0aa0f1c123c6360d66eac16b/1fdc0/AOP4.webp 486w"
+              sizes="(max-width: 486px) 100vw, 486px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/a6bf810b0aa0f1c123c6360d66eac16b/3b721/AOP4.png 192w,
+/static/a6bf810b0aa0f1c123c6360d66eac16b/66595/AOP4.png 384w,
+/static/a6bf810b0aa0f1c123c6360d66eac16b/c42ee/AOP4.png 486w"
+            sizes="(max-width: 486px) 100vw, 486px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/a6bf810b0aa0f1c123c6360d66eac16b/c42ee/AOP4.png"
+            alt="Untitled"
+            title="Untitled"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h3>이걸 Spring에서는 Proxy방식의 AOP라고 한다.</h3>
+<hr>
+<h4>지금까지 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술(김영한) 강의를 완강하면서 Spring 전반적인 내용을 알게 되었다.</h4>
+<h4>이제 하나하나씩 디테일을 추가할 차례다.</h4>
+<h4>이어서 스프링 핵심 원리 - 기본편(김영한) 강의를 들으며 스프링의 본질과 객체 지향 어플리케이션의 설계와 아키텍처를 생각할 수 있는 능력을 키우려고 한다.</h4></div><style data-emotion="css hx9xpc">@media (max-width: 768px){.css-hx9xpc{padding:0 20px;}}</style><div class="css-hx9xpc e1gqsjds0"></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><footer class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 💻<br/>© 2022 Developer Hyeon Seok, Powered By Gatsby.</footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/Spring11/";window.___webpackCompilationHash="a27e9913df3781c28e6e";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-4718f0fec20e0d09d7f5.js"],"app":["/app-12e35b71715558b11edd.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-847a60044927d94f21b6.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-a818571ea0ab25db5be9.js"],"component---src-pages-info-tsx":["/component---src-pages-info-tsx-af04f2ce9f8722512044.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-633cf63a0bd54e02ed86.js"]};/*]]>*/</script><script src="/polyfill-4718f0fec20e0d09d7f5.js" nomodule=""></script><script src="/app-12e35b71715558b11edd.js" async=""></script><script src="/framework-c4c052d1b2b22de01269.js" async=""></script><script src="/webpack-runtime-86441fd9080f8d01406c.js" async=""></script></body></html>
