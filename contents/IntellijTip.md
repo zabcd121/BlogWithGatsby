@@ -3,7 +3,7 @@ date: '2022-05-29'
 title: 'intellij 꿀팁 모음'
 categories: ['IDE TIP']
 summary: '단축키 등 꿀팁'
-thumbnail: './image/Spring.png'
+thumbnail: './image/Intellij.png'
 ---
 
 ### 하나씩 알게 되면 추가!

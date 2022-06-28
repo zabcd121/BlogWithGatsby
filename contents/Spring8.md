@@ -23,6 +23,7 @@ runtimeOnly 'com.h2database:h2'
 ```java
 spring.datasource.url=jdbc:h2:tcp://localhost/~/test
 spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=khs
 ```
 
 ## 2. JdbcMemeberRepository Example
